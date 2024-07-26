@@ -9,7 +9,7 @@ The code is structured in three main parts: data loading, algorithms and evaluat
 
 The following list describes in a lower level the three main parts of the code:
 - Data loading: loads the dataset, performs preprocessing steps and prepares it for algorithm processing. It is divided in two classes:
-  - source: loads the dataset from disk to numpy arrays, splits into train/val/test splits and performs preprocessing steps. The interface is located at `app/data/data_source_abstract.py` and the different subclasses are available at the directory `app/data/sources/`. The current implementation two subclasses for loading the Alibaba and Google datasets.
+  - source: loads the dataset from disk to numpy arrays, splits into train/val/test splits and performs preprocessing steps. The interface is located at `app/data/data_source_abstract.py` and the different subclasses are available at the directory `app/data/sources/`. The current implementation contains two subclasses for loading the Alibaba and Google datasets.
   - type: prepares the dataset for algorithm processing. In the case of deep and machine learning algorithms, creates the forecasting windows and creates a DataLoader for easy access. If a discretization step is required, this part is also in charge of creating the corresponding intervals. On the other hand, for classic methods, a DataLoader is created with the full time series without windows. The interface is located at `app/data/data_type_abstract.py` and the different subclasses are available at the directory `app/data/types/`.
 - Algorithm: implements the training and prediction of the algorithm. There are three types, classical methods (`app/models/classic_methods/`), machine learning methods (`app/models/machine_learning_algorithms/`) and deep learning models (`app/models/networks/`), the three of them with the corresponding interface and multiples subclasses in the specified directories. 
 - Evaluation: implements the evaluation of the results. It is fully described in the manuscript and can be found at `app/evaluation/evaluation.py`.
@@ -31,7 +31,7 @@ The bash script used to run the manuscript experiments is available at `launcher
 
 To run directly with python:
 ```
-python3 app/train_test_model.py --config CONFIG_FILE_PATH --output OUTPUT_DIRECTORY_PATH"
+python3 app/train_test_model.py --config CONFIG_FILE_PATH --output OUTPUT_DIRECTORY_PATH
 ```
 remember to populate the variables:
 - CONFIG_FILE_PATH with all the experiment configuration, check `experiment_configs/` for examples
