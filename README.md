@@ -1,5 +1,5 @@
 # Enhancing the output of time series forecasting algorithms for cloud resource provisioning
-_This repository was created as a result of the research manuscript INCOMING_
+_This repository was created as a result of the [research manuscript](https://www.sciencedirect.com/science/article/pii/S0167739X25001281)_
 
 ### Introduction
 This repository contains an implementation for training, testing and evaluating workload resource forecasting algorithms. It also contains the required code and configurations to run all the experiments of the aforementioned manuscript. 
@@ -64,4 +64,10 @@ Zhou, H., Zhang, S., Peng, J., Zhang, S., Li, J., Xiong, H., & Zhang, W. (2021, 
 
 ```
 Liu, M., Zeng, A., Chen, M., Xu, Z., Lai, Q., Ma, L., & Xu, Q. (2022). Scinet: Time series modeling and forecasting with sample convolution and interaction. Advances in Neural Information Processing Systems, 35, 5816-5828.
+```
+
+### How to cite
+If using this code please cite this paper:
+```
+Agullo, Ferran, et al. "Enhancing the output of time series forecasting algorithms for cloud resource provisioning." Future Generation Computer Systems (2025): 107833.
 ```
